@@ -34,8 +34,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 log(textController.text);
               },
               child: const Text('Guardar')),
+          const SizedBox(
+            height: 5,
+          ),
           ElevatedButton(
               onPressed: _navigateToTextScreen, child: const Text('Cargar')),
+          const SizedBox(
+            height: 5,
+          ),
           ElevatedButton(
               onPressed: () {
                 deleteValues();

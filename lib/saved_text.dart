@@ -12,10 +12,16 @@ class _SavedTextScreenState extends State<SavedTextScreen> {
   String? stringValue = "";
 
   @override
-  void initState() {
-    super.initState();
+  void get initState {
+    super.initState;
     func();
   }
+
+//  @override
+//  void initState() {
+//    super.initState();
+//    func();
+//  }
 
   Future<void> func() async {
     Future<String?> svsp = getStringValuesSP();
@@ -29,7 +35,7 @@ class _SavedTextScreenState extends State<SavedTextScreen> {
       appBar: AppBar(
         title: const Text('Lista de textos'),
       ),
-      body: Center(child: Text($stringValue)),
+      body: Center(child: Text(stringValue.toString())),
     );
   }
 
