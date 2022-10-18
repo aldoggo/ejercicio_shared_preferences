@@ -35,15 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               child: const Text('Guardar')),
           ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SavedTextScreen(),
-                  ),
-                );
-              },
-              child: const Text('Cargar')),
+              onPressed: _navigateToTextScreen, child: const Text('Cargar')),
           ElevatedButton(
               onPressed: () {
                 deleteValues();
@@ -52,6 +44,11 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
     );
+  }
+
+  void _navigateToTextScreen() {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => SavedTextScreen()));
   }
 
   Future<void> addStringToSP(String text) async {
