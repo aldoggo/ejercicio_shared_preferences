@@ -14,7 +14,7 @@ class _SavedTextScreenState extends State<SavedTextScreen> {
   @override
   void initState() {
     super.initState();
-    // func();
+    func();
   }
 
   Future<void> func() async {
